@@ -1,4 +1,4 @@
-(** Exercise: 3 stars (optimize_0plus_b)
+(** Exercise: (optimize_0plus_b)
 Since the optimize_0plus transformation doesn't change the value of aexps, 
 we should be able to apply it to all the aexps that appear in a bexp without changing the bexp's value. 
 Write a function which performs that transformation on bexps, and prove it is sound. 
