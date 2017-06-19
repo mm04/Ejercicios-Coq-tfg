@@ -99,3 +99,12 @@ Proof with auto.
   apply T_App with (T11 := TBool); apply T_Var; reflexivity.
 Qed.
 
+(** **** Exercise: (typable_empty__closed)  *)
+Corollary typable_empty__closed : forall t T,
+    empty |- t \in T  ->
+    closed t.
+Proof.
+  intros t T H. unfold closed, not. intros.
+  apply free_in_context with (T := T) (Gamma := empty) in H0.
+  inversion H0; subst. inversion H1. assumption.
+Qed.
